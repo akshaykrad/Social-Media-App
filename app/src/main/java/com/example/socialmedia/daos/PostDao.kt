@@ -11,9 +11,9 @@ import kotlinx.coroutines.tasks.await
 
 class PostDao {
 
-    private val db = FirebaseFirestore.getInstance()
-    private val postsCollection = db.collection("posts")
-    private val auth = Firebase.auth
+    val db = FirebaseFirestore.getInstance()
+    val postsCollection = db.collection("posts")
+    val auth = Firebase.auth
 
     fun addPost(text : String){
         GlobalScope.launch {
